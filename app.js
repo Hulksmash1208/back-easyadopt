@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 
 var app = express();
 
+let port = process.env.PORT || 3000;
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
@@ -102,4 +104,4 @@ app.post("/api/albergues/crear/", (req,res)=>{
 
 
 
-app.listen(3000,()=>console.log('server on 3000'))
+app.listen(port,()=>console.log('server on 3000'))
